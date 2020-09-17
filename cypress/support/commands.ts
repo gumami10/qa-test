@@ -1,4 +1,3 @@
-
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -73,11 +72,9 @@ Cypress.Commands.add('removeTodo', () => {
  * parameter; lenght of the list
  */
 Cypress.Commands.add('assertHowManyTodos', (listLength) => {
-
   cy.get('.todo-list').should(($list) => {
     expect($list[0].children).to.have.length(listLength)
   })
-
 })
 
 import 'cypress-file-upload'

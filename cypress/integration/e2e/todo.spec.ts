@@ -6,7 +6,7 @@ context('todo page', () => {
   })
 
   it('should be possible to add as many todos as user requires', () => {
-    for(let i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       cy.addTodo('Aldair pereira o grandioso')
     }
     cy.assertHowManyTodos(10)
@@ -22,7 +22,7 @@ context('todo page', () => {
   it('should be possible edit a todo', () => {
     cy.addTodo('Aldair pereira o grandioso')
 
-    cy.editTodo().type('{backspace}', {force: true})
+    cy.editTodo().type('{backspace}', { force: true })
 
     cy.get('.view > label').should('contain', 'Aldair pereira o grandios')
   })

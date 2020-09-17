@@ -13,10 +13,8 @@ context('todo page persistence', () => {
     cy.assertHowManyTodos(1)
 
     cy.get('body').should(() => {
-
       expect(localStorage.getItem('todos-vanillajs')).to.be.not.null
     })
-
   })
 
   it('completed todos should persist', () => {
@@ -30,9 +28,12 @@ context('todo page persistence', () => {
     cy.assertHowManyTodos(1)
 
     cy.get('body').should(() => {
-
       expect(localStorage.getItem('todos-vanillajs')).to.be.not.null
     })
+  })
 
+  afterEach(() => {
+    cy.clearCookies()
+    cy.clearLocalStorage()
   })
 })
