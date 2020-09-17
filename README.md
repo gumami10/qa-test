@@ -21,10 +21,3 @@ npm run cypress:open
 #ou
 yarn cypress:open
 ```
-
-## Rodar testes no terminal
-```bash
-npm run cypress:run
-#ou
-yarn cypress:run
-```

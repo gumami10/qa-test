@@ -5,12 +5,12 @@ context('todo page', () => {
     cy.visit(Cypress.env('host'))
   })
 
-  // it('should be possible to add as many todos as user requires', () => {
-  //   for(let i = 0; i < 10; i++) {
-  //     cy.addTodo('Aldair pereira o grandioso')
-  //   }
-  //   cy.assertHowManyTodos(10)
-  // })
+  it('should be possible to add as many todos as user requires', () => {
+    for(let i = 0; i < 10; i++) {
+      cy.addTodo('Aldair pereira o grandioso')
+    }
+    cy.assertHowManyTodos(10)
+  })
 
   it('should be possible to finish a todo', () => {
     cy.addTodo('Aldair pereira o grandioso')
