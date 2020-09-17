@@ -1,0 +1,42 @@
+{
+  "name": "test-goomer-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --headless",
+    "format": "prettier --write ./**/*.ts ./**/*.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cypress/webpack-preprocessor": "^5.4.5",
+    "cypress-file-upload": "^4.1.1",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "cypress": "^5.1.0",
+    "webpack": "^4.44.1"
+  },
+  "devDependencies": {
+    "@cypress/eslint-plugin-dev": "^5.0.0",
+    "@testing-library/cypress": "^7.0.0",
+    "@types/mocha": "^8.0.3",
+    "@types/testing-library__cypress": "^5.0.6",
+    "@typescript-eslint/eslint-plugin": "4.1.1",
+    "@typescript-eslint/parser": "4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-cypress": "2.11.1",
+    "eslint-plugin-mocha": "8.0.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "husky": "4.3.0",
+    "prettier": "^2.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  }
+}
